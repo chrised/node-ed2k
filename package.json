@@ -1,0 +1,23 @@
+{
+  "name": "node-ed2k",
+  "version": "1.0.0",
+  "description": "Asynchronous ed2k calculator for streams",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrised/node-ed2k.git"
+  },
+  "keywords": [
+    "hash",
+    "ed2k"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrised/node-ed2k/issues"
+  },
+  "homepage": "https://github.com/chrised/node-ed2k#readme"
+}
