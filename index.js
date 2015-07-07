@@ -79,10 +79,6 @@ var ed2k_uri_for_filepath = function(in_path, callback) {
     });
 };
 
-var ed2k_hash_for_stream = function(stream, callback) {
-    ed2k_hash_stream(stream, callback);
-};
-
 /* Callback with ed2k hash for provided filepath
  * in_path - File to hash. Type: String
  * callback - function(err, hash)
