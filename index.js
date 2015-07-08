@@ -52,7 +52,7 @@ var ed2k_hash_stream = function(stream, callback) {
 /* Turn the ed2k hash, filename and size into an ed2k uri
  */
 var ed2k_uri_for_hash = function(hash, filename, size) {
-    return('ed2k://|file|' + filename + '|' + size + '|' + hash);
+    return 'ed2k://|file|' + filename + '|' + size + '|' + hash;
 };
 
 /* Callback with an ed2k URI for a filepath (absolute or relative)
@@ -94,9 +94,10 @@ var ed2k_hash_for_filepath = function(in_path, callback) {
     });
 };
 
-
-module.exports.ed2k_uri_for_filepath    = ed2k_uri_for_filepath;
-module.exports.ed2k_uri_for_hash        = ed2k_uri_for_hash;
-module.exports.ed2k_hash_for_filepath   = ed2k_hash_for_filepath;
-module.exports.ed2k_hash_for_stream     = ed2k_hash_stream;
+module.exports = {
+    ed2k_hash_for_stream: ed2k_hash_stream,
+    ed2k_hash_for_filepath: ed2k_hash_for_filepath,
+    ed2k_uri_for_hash: ed2k_uri_for_hash,
+    ed2k_uri_for_filepath: ed2k_uri_for_filepath
+};
 
