@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/chrised/node-ed2k/issues"
   },
+  "devDependencies": {
+      "vows": ">= 0.8.1"
+  },
   "homepage": "https://github.com/chrised/node-ed2k#readme"
 }
