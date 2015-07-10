@@ -18,6 +18,7 @@ var ed2k_hash_stream = function(stream, callback) {
     var hash = crypto.createHash('md4');
     var metahash = crypto.createHash('md4');
     var hash_current_pos = 0;
+    var chunk_count = 0;
 
     stream.on('data', function (chunk) {
         var hash_offset = 0;
@@ -39,20 +40,28 @@ var ed2k_hash_stream = function(stream, callback) {
             hash = crypto.createHash('md4');
             hash.update(chunk.slice((chunk.length - hash_offset)));
             hash_current_pos = hash_offset;
+            chunk_count++;
         }
     });
 
     stream.on('end', function () {
         // Stream's over, insert the final hash, cb with the completed ed2k
-        metahash.update(hash.digest('binary'));
-        callback(null, metahash.digest('hex'));
+        chunk_count++;
+        if (chunk_count === 1) {
+            // UNLESS this is the one and ONLY Chunk - in which case, callback
+            // the md4 of this chunk alone
+            callback(null, hash.digest('hex'));
+        } else {
+            metahash.update(hash.digest('binary'));
+            callback(null, metahash.digest('hex'));
+        }
     });
 };
 
 /* Turn the ed2k hash, filename and size into an ed2k uri
  */
 var ed2k_uri_for_hash = function(hash, filename, size) {
-    return 'ed2k://|file|' + filename + '|' + size + '|' + hash;
+    return 'ed2k://|file|' + filename + '|' + size + '|' + hash + '|';
 };
 
 /* Callback with an ed2k URI for a filepath (absolute or relative)
