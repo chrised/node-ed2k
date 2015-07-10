@@ -4,7 +4,7 @@
   "description": "Asynchronous ed2k calculator for streams",
   "main": "index.js",
   "scripts": {
-    "test": "cd test; node index.js"
+    "test": "cd test; node index.js; istanbul coverage index.js"
   },
   "repository": {
     "type": "git",

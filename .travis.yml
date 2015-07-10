@@ -2,3 +2,10 @@ language: node_js
 node_js:
     - "0.12"
     - "iojs"
+addons:
+    code_climate:
+        repo_token: 3989f00ddf7b33358cc559a7dc2c535b60f520fb0d43db099e4cd402312b5b03
+before_script:
+    - npm install -g istanbul
+after_script:
+    - codeclimate < test/coverage/lcov.info
