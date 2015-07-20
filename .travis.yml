@@ -8,4 +8,4 @@ addons:
 before_script:
     - npm install -g istanbul
 after_script:
-    - codeclimate < /home/travis/build/chrised/node-ed2k/test/coverage/lcov.info
+    - codeclimate-test-reporter < /home/travis/build/chrised/node-ed2k/test/coverage/lcov.info
