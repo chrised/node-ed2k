@@ -8,15 +8,10 @@ var vows = require('vows'),
 
 var ed2k = require('../');
 
-//module.exports = {
-//    ed2k_hash_for_stream: ed2k_hash_stream,
-//    ed2k_hash_for_filepath: ed2k_hash_for_filepath,
-//    ed2k_uri_for_hash: ed2k_uri_for_hash,
-//    ed2k_uri_for_filepath: ed2k_uri_for_filepath
-//};
 var largefile = testdata.li_large,
     mediumfile = testdata.li_med,
     smallfile = testdata.li_small;
+
 vows.describe('Given a large file').addBatch({
     'we can calculate a hash from the path': {
         topic: function() {
@@ -113,6 +108,27 @@ vows.describe('Given a small file').addBatch({
             }
         }
     }
-}).run();   //'we can hash it': {
-        //topic: ed2k.ed2k_hash_stream(fs.createStream(testdata.li_large.path)
+}).run();
 
+vows.describe('Given a dead path').addBatch({
+    'we fail to get a hash': {
+        topic: function() {
+            ed2k.ed2k_hash_for_filepath('./dud/file/path', this.callback);
+        },
+        'which matches the expected value': function(err, hash) {
+            assert.isNotNull(err);
+            assert.notEqual(err, undefined);
+            assert.isUndefined(hash);
+        }
+    },
+    'we fail to get a uri': {
+        topic: function() {
+            ed2k.ed2k_uri_for_filepath('./dud/file/path', this.callback);
+        },
+        'which matches the expected value': function(err, uri) {
+            assert.isNotNull(err);
+            assert.notEqual(err, undefined);
+            assert.isUndefined(uri);
+        }
+    }
+}).run();
