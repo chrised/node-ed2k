@@ -32,18 +32,18 @@ Require the module:
 
 `callback` - function(err, ed2k_uri)
 
-    `err` - `null` if success, !`null` if error, passed from `fs` modules
+        `err` - `null` if success, !`null` if error, passed from `fs` modules
 
-    `ed2k_uri` - String if success, undefined if err
+        `ed2k_uri` - String if success, undefined if err
 
 #### ed2k_hash_for_filepath(path, callback)
 `path` - String, relative or absolute path to a file
 
 `callback` - function(err, ed2k_uri)
 
-    `err` - `null` if success, !`null` if error, passed from `fs` modules
+        `err` - `null` if success, !`null` if error, passed from `fs` modules
 
-    `ed2k_uri` - String if success, undefined if err
+        `ed2k_uri` - String if success, undefined if err
 
 #### ed2k_uri_for_hash(hash, filename, size)
 `hash` - String, string hash of file
@@ -59,9 +59,9 @@ returns: String, ed2k uri
 
 `callback` - function(err, ed2k_uri)
 
-    `err` - `null` if success, !`null` if error, passed from `fs` modules
+        `err` - `null` if success, !`null` if error, passed from `fs` modules
 
-    `ed2k_uri` - String if success, undefined if err
+        `ed2k_uri` - String if success, undefined if err
 
 ### Example
     var ed2k = require('node-ed2k');
