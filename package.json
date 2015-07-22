@@ -14,7 +14,7 @@
     "hash",
     "ed2k"
   ],
-  "author": "",
+  "author": "chrised",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/chrised/node-ed2k/issues"
