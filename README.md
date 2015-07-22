@@ -29,26 +29,38 @@ Require the module:
 ### Methods
 #### ed2k_hash_for_stream(stream, callback)
 `stream` - stream (http://nodejs.org/api/stream.html)
+
 `callback` - function(err, ed2k_uri)
+
     `err` - `null` if success, !`null` if error, passed from `fs` modules
+
     `ed2k_uri` - String if success, undefined if err
 
 #### ed2k_hash_for_filepath(path, callback)
 `path` - String, relative or absolute path to a file
+
 `callback` - function(err, ed2k_uri)
+
     `err` - `null` if success, !`null` if error, passed from `fs` modules
+
     `ed2k_uri` - String if success, undefined if err
 
 #### ed2k_uri_for_hash(hash, filename, size)
 `hash` - String, string hash of file
+
 `filename` - String, name of file, path not required
+
 `size` - String/Int, size of file
+
 returns: String, ed2k uri
 
 #### ed2k_uri_for_filepath(path, callback)
 `path` - String, relative or absolute path to a file
+
 `callback` - function(err, ed2k_uri)
+
     `err` - `null` if success, !`null` if error, passed from `fs` modules
+
     `ed2k_uri` - String if success, undefined if err
 
 ### Example
