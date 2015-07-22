@@ -30,20 +30,20 @@ Require the module:
 #### ed2k_hash_for_stream(stream, callback)
 `stream` - stream (http://nodejs.org/api/stream.html)
 
-`callback` - function(err, ed2k_uri)
+`callback` - `function(err, ed2k_uri)`
 
-        `err` - `null` if success, !`null` if error, passed from `fs` modules
+&nbsp;&nbsp;&nbsp;&nbsp;`err` - `null` if success, !`null` if error, passed from `fs` modules
 
-        `ed2k_uri` - String if success, undefined if err
+&nbsp;&nbsp;&nbsp;&nbsp;`ed2k_uri` - String if success, `undefined` if err
 
 #### ed2k_hash_for_filepath(path, callback)
 `path` - String, relative or absolute path to a file
 
-`callback` - function(err, ed2k_uri)
+`callback` - `function(err, ed2k_uri)`
 
-        `err` - `null` if success, !`null` if error, passed from `fs` modules
+&nbsp;&nbsp;&nbsp;&nbsp;`err` - `null` if success, !`null` if error, passed from `fs` modules
 
-        `ed2k_uri` - String if success, undefined if err
+&nbsp;&nbsp;&nbsp;&nbsp;`ed2k_uri` - String if success, `undefined` if err
 
 #### ed2k_uri_for_hash(hash, filename, size)
 `hash` - String, string hash of file
@@ -57,11 +57,11 @@ returns: String, ed2k uri
 #### ed2k_uri_for_filepath(path, callback)
 `path` - String, relative or absolute path to a file
 
-`callback` - function(err, ed2k_uri)
+`callback` - `function(err, ed2k_uri)`
 
-        `err` - `null` if success, !`null` if error, passed from `fs` modules
+&nbsp;&nbsp;&nbsp;&nbsp;`err` - `null` if success, !`null` if error, passed from `fs` modules
 
-        `ed2k_uri` - String if success, undefined if err
+&nbsp;&nbsp;&nbsp;&nbsp;`ed2k_uri` - String if success, `undefined` if err
 
 ### Example
     var ed2k = require('node-ed2k');
@@ -71,4 +71,3 @@ returns: String, ed2k uri
             console.log(hash);
         }
     });
-
