@@ -1,17 +1,20 @@
 {
     "li_large": {
-        "uri": "ed2k://|file|li_large|29008373|972aa92334b179e1617d011bfefb8e44|",
-        "hash": "972aa92334b179e1617d011bfefb8e44",
-        "path": "data/li_large"
+        "uri": "ed2k://|file|li_large|28199998|aa6cc860d85aacddb0294286a3920545|",
+        "hash": "aa6cc860d85aacddb0294286a3920545",
+        "path": "data/li_large",
+        "paragraphs": 200000
     },
     "li_med": {
-        "uri": "ed2k://|file|li_med|11641181|e9675a698d5afb26ffbea60900d2cdef|",
-        "hash": "e9675a698d5afb26ffbea60900d2cdef",
-        "path": "data/li_med"
+        "uri": "ed2k://|file|li_med|14099998|b379b9fbe6171bbb136f696db4071a40|",
+        "hash": "b379b9fbe6171bbb136f696db4071a40",
+        "path": "data/li_med",
+        "paragraphs": 100000
     },
     "li_small": {
-        "uri": "ed2k://|file|li_small|7262671|335baf6a03102bec1fd1464aba9d1708|",
-        "hash": "335baf6a03102bec1fd1464aba9d1708",
-        "path": "data/li_small"
+        "uri": "ed2k://|file|li_small|8459998|fb119458428c8437ebc6015dffad5fd8|",
+        "hash": "fb119458428c8437ebc6015dffad5fd8",
+        "path": "data/li_small",
+        "paragraphs": 60000
     }
 }

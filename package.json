@@ -20,7 +20,8 @@
     "url": "https://github.com/chrised/node-ed2k/issues"
   },
   "devDependencies": {
-      "vows": ">= 0.8.1"
+      "vows": ">= 0.8.1",
+      "lorem-ipsum": "1.0.3"
   },
   "homepage": "https://github.com/chrised/node-ed2k#readme"
 }
