@@ -1,6 +1,6 @@
 {
   "name": "node-ed2k",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Asynchronous ed2k calculator for streams",
   "main": "index.js",
   "scripts": {
