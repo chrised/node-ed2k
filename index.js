@@ -36,7 +36,7 @@ var ed2k_hash_stream = function(stream, callback) {
             // ed2k chunk complete, update the metahash and create a fresh hash
             // append any remaining data in the current stream chunk and update
             // the current position to be the length of the new data entered.
-            metahash.update(hash.digest('binary'));
+            metahash.update(hash.digest());
             hash = crypto.createHash('md4');
             hash.update(chunk.slice((chunk.length - hash_offset)));
             hash_current_pos = hash_offset;
@@ -52,7 +52,7 @@ var ed2k_hash_stream = function(stream, callback) {
             // the md4 of this chunk alone
             callback(null, hash.digest('hex'));
         } else {
-            metahash.update(hash.digest('binary'));
+            metahash.update(hash.digest());
             callback(null, metahash.digest('hex'));
         }
     });
